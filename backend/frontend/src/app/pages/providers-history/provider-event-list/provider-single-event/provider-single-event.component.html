@@ -1,0 +1,25 @@
+<div class="card w-100">
+  <div class="row">
+    <div class="col-xs-5 col-md-5">
+      <img class="group myimage" src="data:image/png;base64,{{event.photoBody}}" alt="Sorry" routerLink="/one-event/{{event.id}}" />
+    </div>
+    <div class="col-xs-7 col-md-7">
+      <div class="card-body">
+
+        <h5 class="card-title"><b>{{event.eventname}}</b></h5>
+        <br>
+        <p class="card-text"><b>Περιγραφή:</b> {{this.shortDescription}}</p>
+        <p class="card-text"><b>Ημερομηνία </b> {{event.date}}</p>
+        <br>
+        <p class="card-text">
+          <b>Αγοράστηκαν εισητήρια:</b>{{tickets}}
+          <br>
+
+          <b>Συνολικά χρήματα απο εισητήρια:</b>{{m_tickets}}
+          <br>
+          <b>Επισκεψιμότητα Δραστηριότητας:</b>{{clicks}}
+        </p>
+      </div>
+      </div>
+    </div>
+  </div>

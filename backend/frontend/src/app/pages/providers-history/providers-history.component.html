@@ -1,0 +1,81 @@
+<app-main-toolbar> </app-main-toolbar>
+
+
+<div class="general">
+      <h4  style="text-align:center;font-family:sans-serif;text-transform: uppercase;color: #56baed;"><b>Ιστορικo Δραστηριοτhτων & Στατιστικα</b></h4><br>
+      <div class="row">
+           <div class="col-md-6 col-xs-6 col-lg-6 col-sm-6">
+           <h5  style="text-align:center;text-transform: uppercase; color: #cccccc;" >Ιστορικo Δραστηριοτhτων </h5>
+
+                  <app-provider-event-list  [events]="eventsList">
+                 </app-provider-event-list>
+           </div>
+
+           <div class="col-md-6 col-xs-6 col-lg-6 col-sm-6">
+           <h5  style="text-align:center;text-transform: uppercase; color: #cccccc;">Στατιστικά</h5>
+           <div class="container">
+         <h5 style="text-transform: uppercase; color: #cccccc;">Θεματική κατηγορία </h5>
+         <h6 style="font-size: 13px;"><b>Αθλητισμός:</b></h6>
+        <div class="progress">
+        <div class="progress-bar  progress-bar-success" role="progressbar" aria-valuenow="cat1_stats" aria-valuemin="0" aria-valuemax="100" [style.width]="cat1_stats + '%'"> {{cat1_stats}}
+        </div>
+        </div>
+        <h6 style="font-size: 13px;"><b>Kαλλιτεχνικά:</b></h6>
+        <div class="progress" >
+        <div  class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="cat2_stats" aria-valuemin="0" aria-valuemax="100" [style.width]="cat2_stats + '%'"> {{cat2_stats}}
+        </div>
+        </div>
+        <h6 style="font-size: 13px;"><b>Εκπαίδευση:</b></h6>
+        <div class="progress">
+        <div  class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="cat3_stats" aria-valuemin="0" aria-valuemax="100" [style.width]="cat3_stats + '%'"> {{cat3_stats}}
+        </div>
+
+        </div>
+        </div>
+         <br>
+         <br>
+            <div class="container">
+         <h5 style="text-transform: uppercase; color: #cccccc;">Ηλικιακή κατηγορία </h5>
+         <h6 style="font-size: 13px;"><b>2-5:</b></h6>
+        <div class="progress">
+        <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="age1_stats" aria-valuemin="0" aria-valuemax="100" [style.width]="age1_stats + '%'"> {{age1_stats}}
+        </div>
+        </div>
+        <h6 style="font-size: 13px;"><b>5-10:</b></h6>
+        <div class="progress" >
+        <div  class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="age2_stats" aria-valuemin="0" aria-valuemax="100" [style.width]="age2_stats + '%'"> {{age2_stats}}
+        </div>
+        </div>
+        <h6 style="font-size: 13px;"><b>10-15:</b></h6>
+        <div class="progress">
+        <div  class="progress-bar progress-bar-warning" type="warning" role="progressbar" aria-valuenow="age3_stats" aria-valuemin="0" aria-valuemax="100" [style.width]="age3_stats + '%'"> {{age3_stats}}
+        </div>
+        </div>
+         <h6 style="font-size: 13px;"><b>15+:</b></h6>
+        <div class="progress">
+        <div  class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="age4_stats" aria-valuemin="0" aria-valuemax="100" [style.width]="age4_stats + '%'"> {{age4_stats}}
+        </div>
+
+        </div>
+        </div>
+
+
+      </div>
+
+</div>
+<br>
+<div class="card w-100">
+
+    <div class="row">
+         <div class="col-xs-6 col-md-6 col-sm-6 col-lg-6">
+         <h6 class="card-text"><b>Τον τελευταίο μήνα:</b></h6>
+         </div>
+         <div class="col-xs-3 col-md-3 col-sm-3 col-lg-3">
+         <h6 class="card-text"><b>Συνολικά εισητήρια:{{monthly_t}}</b></h6>
+         </div>
+         <div class="col-xs-3 col-md-3 col-sm-3 col-lg-3">
+         <h6 class="card-text"><b>Συνολικά χρήματα:{{monthly_m}}€</b></h6>
+         </div>
+      </div>
+   </div>
+</div>

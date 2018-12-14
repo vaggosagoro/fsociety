@@ -1,0 +1,8 @@
+<div *ngIf="events.length!=0">
+  <agm-map [latitude]="centerLat" [longitude]="centerLng" [fitBounds]="mapBounds" [zoomControl]="true">
+    <app-events-marker [searchURLParameters]="searchURLParameters" *ngFor="let ev of events" [event]="ev" [markerId]="events.indexOf(ev)"></app-events-marker>
+  </agm-map>
+</div>
+<div *ngIf="events.length==0">
+  <p>Λυπούμαστε, δεν υπάρχουν δραστηριότητες για τα κριτήρια αναζήτησης που χρησιμοποιήσατε.  </p>
+</div>

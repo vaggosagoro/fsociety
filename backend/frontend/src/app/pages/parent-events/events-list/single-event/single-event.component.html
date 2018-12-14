@@ -1,0 +1,34 @@
+<div class="card w-100">
+  <div class="row">
+    <div class="col-xs-5 col-md-5">
+      <img class="my-clickable group myimage" src="data:image/png;base64,{{event.photoBody}}" alt="Sorry" [routerLink]="['/one-event',event.id,searchURLParameters[0],searchURLParameters[1],searchURLParameters[2],searchURLParameters[3],searchURLParameters[4],searchURLParameters[5],searchURLParameters[6],searchURLParameters[7]]" />
+    </div>
+    <div class="col-xs-7 col-md-7">
+      <div class="card-body">
+
+
+            <h5 class="my-clickable card-title" [routerLink]="['/one-event',event.id,searchURLParameters[0],searchURLParameters[1],searchURLParameters[2],searchURLParameters[3],searchURLParameters[4],searchURLParameters[5],searchURLParameters[6],searchURLParameters[7]]" ><b>{{event.eventname}}</b></h5>
+            <p></p><br>
+        <p class="card-text"><b>Περιγραφη: </b>{{shortDescription}} <a *ngIf="isLong" [routerLink]="['/one-event',event.id,searchURLParameters[0],searchURLParameters[1],searchURLParameters[2],searchURLParameters[3],searchURLParameters[4],searchURLParameters[5],searchURLParameters[6],searchURLParameters[7]]" >Δείτε περισσότερα</a></p>
+
+        <p class="card-text"><b>Συνολικές θέσεις: </b> {{this.event.capacity}}</p>
+        <p class="card-text"><b>Ημερομηνία </b> {{this.event.date}}</p>
+        <p></p><br>
+        <div class="row">
+        <div class="col-xs-8 col-md-8">
+          <b>Τιμή εισιτηρίου:</b> {{event.price}}€
+        </div>
+        <div class="col-xs-4 col-md-4">
+          <div *ngIf="!flag then content1 else content2"></div>
+          <ng-template #content1>
+            <button  type="button" class="my-clickable btn btn-primary" routerLink="/login-page">Κράτα θέση</button>
+          </ng-template>
+          <ng-template #content2 let-event_id="event.id" let-event_cap="event.capacity">
+            <button type="button" class="my-clickable btn btn-primary" [routerLink]="['/one-event',event.id,searchURLParameters[0],searchURLParameters[1],searchURLParameters[2],searchURLParameters[3],searchURLParameters[4],searchURLParameters[5],searchURLParameters[6],searchURLParameters[7]]" >Κράτα θέση</button>
+          </ng-template>
+        </div>
+      </div>
+      </div>
+    </div>
+  </div>
+</div>
